@@ -87,9 +87,9 @@ st.markdown("""
 # ===================== DATA LOADING =====================
 @st.cache_data(ttl=3600)
 def load_data():
-    df = pd.read_csv('a120c.csv')
+    df = pd.read_csv('a127_final_v35.csv', low_memory=False)
     # Clean and prepare data
-    df['Date of Discovery'] = pd.to_datetime(df['Date of Discovery'], errors='coerce')
+    df['Date of Discovery'] = pd.to_datetime(df['Date_ISO'], format='%Y-%m-%d', errors='coerce')
     df['Year-Month'] = df['Date of Discovery'].dt.to_period('M').astype(str)
     df['Quarter_Label'] = 'Q' + df['Quarter'].astype(str) + ' ' + df['Year'].astype(str)
 

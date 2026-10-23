@@ -251,6 +251,7 @@ with use_case_col1:
             <span class='use-case-badge'>📦 Packaging Format Strategy</span>
             <span class='use-case-badge'>📈 Revenue Management</span>
             <span class='use-case-badge'>🏙️ Regional Distribution Planning</span>
+            <span class='use-case-badge'>💡 Shrinkflation, Offers & Health Insights</span>
         </div>
         """,
         unsafe_allow_html=True,
